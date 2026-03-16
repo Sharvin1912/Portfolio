@@ -1,0 +1,29 @@
+.item {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.topline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.topline h3,
+.topline span,
+.meta,
+.item ul {
+  margin: 0;
+}
+
+.topline span,
+.meta {
+  color: var(--color-muted);
+}
+
+.item ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--space-2);
+}

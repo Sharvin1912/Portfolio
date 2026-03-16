@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 40%),
+    radial-gradient(circle at 85% 10%, #edf3ff 0%, transparent 35%),
+    var(--color-bg);
+}
+
+.playerWrap {
+  width: min(280px, 65vw);
+  aspect-ratio: 1 / 1;
+}

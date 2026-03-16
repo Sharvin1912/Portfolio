@@ -1,0 +1,1 @@
+Replace this file with your actual resume PDF and update src/data/siteMeta.js and src/data/hero.js links.

@@ -1,0 +1,10 @@
+.container {
+  width: min(var(--container-max), calc(100% - 2.25rem));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 1.5rem);
+  }
+}

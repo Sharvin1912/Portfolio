@@ -1,0 +1,37 @@
+:root {
+  --color-bg: #f8f9fb;
+  --color-surface: #ffffff;
+  --color-text: #151821;
+  --color-muted: #606879;
+  --color-accent: #2b63e8;
+  --color-border: #e3e7f0;
+  --color-accent-soft: #edf2ff;
+
+  --font-sans: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-display: "Anton", "Arial Black", "Segoe UI", sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+
+  --shadow-sm: 0 4px 14px rgba(16, 22, 40, 0.06);
+  --shadow-md: 0 8px 24px rgba(16, 22, 40, 0.1);
+
+  --container-max: 1040px;
+  --header-height: 72px;
+
+  --transition-fast: 180ms ease;
+  --transition-base: 260ms ease;
+}

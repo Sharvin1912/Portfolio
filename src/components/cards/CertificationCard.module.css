@@ -1,0 +1,18 @@
+.card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card img {
+  width: 100%;
+  max-width: 120px;
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card p {
+  color: var(--color-muted);
+}

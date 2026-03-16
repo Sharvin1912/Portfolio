@@ -1,0 +1,19 @@
+.card {
+  display: grid;
+  gap: var(--space-3);
+  justify-items: start;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card p {
+  color: var(--color-muted);
+}
