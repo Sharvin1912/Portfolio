@@ -6,7 +6,6 @@ export default function SkillCard({ item }) {
     <Card className={styles.card}>
       <img src={item.icon} alt="" aria-hidden="true" />
       <h3>{item.name}</h3>
-      <p>{item.level}</p>
     </Card>
   );
 }

@@ -11,6 +11,7 @@ const showcases = {
   mentor: {
     label: "Mentor",
     name: "Dr. Yonas Tadesse",
+    position: "Professor of Mechanical Engineering, UTD",
     profileHref: "https://profiles.utdallas.edu/yonas.tadesse",
     image: "/assets/hero/placeholder-portrait.svg",
   },

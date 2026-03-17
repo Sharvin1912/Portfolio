@@ -1,29 +1,65 @@
 .item {
+  position: relative;
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-2);
+  margin-left: clamp(0.35rem, 1vw, 0.65rem);
 }
 
-.topline {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-4);
+.item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * clamp(1.1rem, 2vw, 1.4rem));
+  top: 1.25rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid color-mix(in srgb, var(--color-accent), white 25%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent), transparent 82%);
 }
 
-.topline h3,
-.topline span,
+.role,
+.company,
 .meta,
-.item ul {
+.points {
   margin: 0;
 }
 
-.topline span,
-.meta {
-  color: var(--color-muted);
+.roleRow {
+  display: block;
 }
 
-.item ul {
+.role {
+  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+  letter-spacing: 0.01em;
+}
+
+.company {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-muted);
+  font-size: 0.96rem;
+}
+
+.metaDot {
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-muted), transparent 15%);
+}
+
+.points {
   padding-left: 1.1rem;
   display: grid;
-  gap: var(--space-2);
+  gap: 0.35rem;
+  color: var(--color-text);
+}
+
+.points li {
+  line-height: 1.45;
 }

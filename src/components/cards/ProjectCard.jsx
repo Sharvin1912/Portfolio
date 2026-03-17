@@ -28,7 +28,7 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className={styles.actions}>
-        <Button href={project.links.details || project.links.live} className={styles.detailsButton}>
+        <Button href={`#/project/${project.id}`} className={styles.detailsButton}>
           View Details
         </Button>
       </div>

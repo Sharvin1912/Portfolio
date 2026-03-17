@@ -48,6 +48,7 @@ export default function ShowcasesSection({ data }) {
                     <span className={styles.profileTooltip}>View Profile</span>
                   </a>
                 </strong>
+                <p className={styles.mentorPosition}>{data.mentor.position}</p>
               </div>
             </div>
             <Button href={data.labLink.href} variant="ghost" className={styles.labButton}>

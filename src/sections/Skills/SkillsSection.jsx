@@ -6,13 +6,19 @@ import styles from "./SkillsSection.module.css";
 export default function SkillsSection({ data, certifications }) {
   if (!data?.enabled) return null;
 
+  const toolsGridStyle = {
+    "--tools-cols-desktop": data.toolsGrid?.desktopColumns || 5,
+    "--tools-cols-laptop": data.toolsGrid?.laptopColumns || 4,
+    "--tools-cols-tablet": data.toolsGrid?.tabletColumns || 3,
+  };
+
   return (
     <Section id={data.id}>
       <SectionHeader title={data.title} summary={data.summary} />
       <div className={styles.stack}>
         <section className={styles.subsection}>
           <h3>Software Tools</h3>
-          <div className={styles.grid}>
+          <div className={styles.grid} style={toolsGridStyle}>
             {data.softwareTools.map((item) => (
               <SkillCard key={item.id} item={item} />
             ))}

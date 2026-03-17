@@ -1,8 +1,9 @@
 import styles from "./App.module.css";
 import { useEffect, useState } from "react";
-import routes from "./routes";
-import Navbar from "../components/navigation/Navbar";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import LoadingScreen from "../components/ui/LoadingScreen";
+import HomePage from "../pages/HomePage";
+import ProjectDetailsPage from "../pages/ProjectDetailsPage";
 import {
   siteMeta,
   navigation,
@@ -67,32 +68,29 @@ export default function App() {
   }, [isLoading]);
 
   return (
-    <div className={styles.app}>
-      {isLoading ? <LoadingScreen /> : null}
-      <Navbar brand={siteMeta.siteName} brandLogo={siteMeta.brandLogo} links={navigation} />
-
-      <main>
-        {sectionOrder.map((sectionId) => {
-          const Component = routes[sectionId];
-          if (!Component) return null;
-          const data = sectionData[sectionId];
-          if (data?.enabled === false) return null;
-
-          if (sectionId === "contact") {
-            return <Component key={sectionId} data={data} socialLinks={socialLinks} />;
-          }
-
-          if (sectionId === "skills") {
-            return <Component key={sectionId} data={data} certifications={certifications} />;
-          }
-
-          if (sectionId === "footer") {
-            return <Component key={sectionId} siteMeta={siteMeta} />;
-          }
-
-          return <Component key={sectionId} data={data} />;
-        })}
-      </main>
-    </div>
+    <HashRouter>
+      <div className={styles.app}>
+        {isLoading ? <LoadingScreen /> : null}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                siteMeta={siteMeta}
+                navigation={navigation}
+                sectionOrder={sectionOrder}
+                sectionData={sectionData}
+                socialLinks={socialLinks}
+                certifications={certifications}
+              />
+            }
+          />
+          <Route
+            path="/project/:projectId"
+            element={<ProjectDetailsPage siteMeta={siteMeta} navigation={navigation} projectsData={projects} />}
+          />
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }

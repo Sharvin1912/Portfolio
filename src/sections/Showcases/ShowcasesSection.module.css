@@ -75,6 +75,14 @@
 .mentorText strong {
   font-size: 1rem;
   font-weight: 700;
+  display: block;
+}
+
+.mentorPosition {
+  margin: 0.35rem 0 0 0;
+  font-size: 0.82rem;
+  color: #646d7c;
+  line-height: 1.4;
 }
 
 .profileLink {

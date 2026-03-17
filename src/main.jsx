@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./app/App";
 import "./styles/tokens.css";
+import "./styles/tailwind.css";
 import "./styles/globals.css";
 import "./styles/utilities.css";
 import "./styles/motion.css";
