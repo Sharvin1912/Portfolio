@@ -1,12 +1,12 @@
 const siteMeta = {
-  siteName: "Austin Pham Portfolio",
-  title: "Austin Pham | Frontend Engineer",
-  description: "Frontend engineer portfolio focused on polished, scalable web interfaces.",
-  url: "https://yourdomain.com",
+  siteName: "Sharvin Tagunde",
+  title: "Sharvin Tagunde | Mechanical Engineer",
+  description: "Mechanical engineering portfolio focused on practical design, analysis, and prototyping.",
+  url: "https://sharvintagunde.com",
   brandLogo: "/assets/shared/website-logo.png",
   resumeUrl: "https://drive.google.com/",
-  email: "hello@yourdomain.com",
-  location: "Chicago, IL",
+  email: "tagundesharvin@gmail.com",
+  location: "United States",
 };
 
 export default siteMeta;

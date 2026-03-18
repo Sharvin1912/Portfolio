@@ -134,6 +134,7 @@
   border-radius: 999px;
   border: 1px solid var(--color-border);
   object-fit: cover;
+  object-position: center 24%;
 }
 
 .labButton {

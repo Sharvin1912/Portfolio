@@ -1,7 +1,9 @@
+import profilePhoto from "../../content/Images/P1Profile Photo.png";
+
 const hero = {
   id: "hero",
   enabled: true,
-  availability: "AVAILABLE TO WORK",
+  availability: "READY FOR WORK",
   heading: "SHARVIN TAGUNDE",
   role: "MECHANICAL ENGINEER",
   subheading:
@@ -10,7 +12,7 @@ const hero = {
     {
       id: "view-projects",
       label: "View Projects",
-      href: "#projects",
+      href: "#/?section=projects",
       variant: "primary",
       icon: "arrow-right",
       iconPosition: "end",
@@ -25,14 +27,14 @@ const hero = {
     },
   ],
   quickLinks: [
-    { id: "mail", label: "Mail", href: "mailto:hello@yourdomain.com", icon: "mail" },
-    { id: "contact", label: "Contact", href: "#contact", icon: "phone" },
+    { id: "mail", label: "Mail", href: "mailto:tagundesharvin@gmail.com", icon: "mail" },
+    { id: "contact", label: "Contact", href: "#/?section=contact", icon: "phone" },
     { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/username", icon: "linkedin" },
     { id: "github", label: "GitHub", href: "https://github.com/username", icon: "github" },
   ],
   profileImage: {
-    src: "/assets/hero/placeholder-portrait.svg",
-    alt: "Profile placeholder portrait",
+    src: profilePhoto,
+    alt: "Sharvin Tagunde profile photo",
   },
 };
 

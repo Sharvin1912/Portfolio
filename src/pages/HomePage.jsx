@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import routes from "../app/routes";
 import Navbar from "../components/navigation/Navbar";
 import scrollToId from "../utils/scrollToId";
@@ -13,13 +13,29 @@ export default function HomePage({
   certifications,
 }) {
   const location = useLocation();
+  const navigate = useNavigate();
+  const initialHandledRef = useRef(false);
 
   useEffect(() => {
+    const navEntries = window.performance?.getEntriesByType?.("navigation") || [];
+    const navType = navEntries[0]?.type;
+    const isReload = navType === "reload";
+
+    if (!initialHandledRef.current) {
+      initialHandledRef.current = true;
+
+      if (isReload) {
+        navigate("/", { replace: true });
+        window.setTimeout(() => scrollToId("hero"), 40);
+        return;
+      }
+    }
+
     const params = new URLSearchParams(location.search);
     const section = params.get("section");
     if (!section) return;
     window.setTimeout(() => scrollToId(section), 40);
-  }, [location.search]);
+  }, [location.search, navigate]);
 
   useEffect(() => {
     let locked = false;

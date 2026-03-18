@@ -74,7 +74,7 @@ const projects = {
     },
     {
       id: "p3",
-      name: "Docs Hub",
+      name: "Design of a Bio-Inspired Hydrogen Powered Robot for Remote Terrain Exploration",
       description:
         "Technical documentation interface with content-first navigation, structured writing templates, and improved discoverability for engineering and research workflows.",
       thumbnail: "/assets/projects/project-3.svg",
@@ -106,7 +106,7 @@ const projects = {
     },
     {
       id: "p4",
-      name: "Lab Tracker",
+      name: "Developing a Precision Bush Insertion Machine for Engine Component Assembly",
       description:
         "A lightweight progress and reporting dashboard for academic project milestones, mentor checkpoints, and experiment records with a clear status-first interface.",
       thumbnail: "/assets/projects/showcase-2.svg",

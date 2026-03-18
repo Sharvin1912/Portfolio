@@ -1,6 +1,6 @@
 import Section from "../../components/layout/Section";
 import SectionHeader from "../../components/layout/SectionHeader";
-import TimelineItem from "../../components/cards/TimelineItem";
+import RoadmapTimeline from "../../components/roadmap/RoadmapTimeline";
 import styles from "./ExperienceSection.module.css";
 
 export default function ExperienceSection({ data }) {
@@ -10,9 +10,7 @@ export default function ExperienceSection({ data }) {
     <Section id={data.id}>
       <SectionHeader title={data.title} summary={data.summary} />
       <div className={styles.stack}>
-        {data.items.map((item) => (
-          <TimelineItem key={item.id} item={item} />
-        ))}
+        <RoadmapTimeline items={data.items} />
       </div>
     </Section>
   );
