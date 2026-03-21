@@ -7,7 +7,13 @@
 .backButton {
   justify-self: end;
   width: auto !important;
-  min-width: 180px;
+  min-width: 190px;
+}
+
+.backButton:hover span:last-child,
+.backButton:focus-visible span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
 }
 
 .card {
@@ -56,6 +62,21 @@
   margin: 0;
   color: #475062;
   line-height: 1.7;
+}
+
+.reportCta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+.reportButton {
+  min-height: 40px !important;
+  padding: 0.5rem 0.95rem !important;
+  border-radius: 0.55rem !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
 .keywordGrid {

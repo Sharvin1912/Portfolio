@@ -4,7 +4,7 @@ const showcases = {
   id: "research",
   enabled: true,
   title: "Research",
-  summary: "Focused research and case-study work that shaped final product decisions.",
+  summary: "",
   organization: "Electromagnetic Wave Energy Harvesting",
   organizationSubheading: "Humanoid, Biorobotics & Smart Systems (HBS) Lab, University of Texas at Dallas",
   period: "Aug 2024 - Present",

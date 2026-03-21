@@ -7,7 +7,7 @@ const hero = {
   heading: "SHARVIN TAGUNDE",
   role: "MECHANICAL ENGINEER",
   subheading:
-    "MS Mechanical Engineering candidate at UT Dallas with a 3.75 GPA, active graduate research, and 18+ months of industry internship experience. Skilled in CAD, FEA, DFM, and engineering optimization - with a track record of taking designs from whiteboard to working prototype across clean-tech, robotics, and industrial applications.",
+    "MS Mechanical Engineering candidate at UT Dallas with a 3.75 GPA, active graduate research, and 15+ months of industry internship experience. Skilled in CAD, FEA, DFM, Robotics and Engineering optimization - with a track record of taking designs from whiteboard to working prototype across clean-tech, robotics, and industrial applications.",
   actions: [
     {
       id: "view-projects",

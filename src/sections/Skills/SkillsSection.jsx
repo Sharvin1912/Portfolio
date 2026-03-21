@@ -1,7 +1,16 @@
 import Section from "../../components/layout/Section";
 import SectionHeader from "../../components/layout/SectionHeader";
 import SkillCard from "../../components/cards/SkillCard";
+import Button from "../../components/ui/Button";
 import styles from "./SkillsSection.module.css";
+
+function ExternalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M14 4h6v6M10 14 20 4M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export default function SkillsSection({ data, certifications }) {
   if (!data?.enabled) return null;
@@ -35,7 +44,16 @@ export default function SkillsSection({ data, certifications }) {
                   <h4>{item.name}</h4>
                   <p>{item.issuer} | {item.date}</p>
                 </div>
-                <a href={item.credentialUrl} target="_blank" rel="noreferrer">Credential</a>
+                <Button
+                  href={item.credentialUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="ghost"
+                  className={styles.credentialButton}
+                  endIcon={<ExternalIcon />}
+                >
+                  View Credential
+                </Button>
               </article>
             ))}
           </div>

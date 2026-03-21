@@ -69,9 +69,17 @@
   color: var(--color-muted);
 }
 
-.certItem a {
-  font-size: 0.84rem;
-  font-weight: 700;
+.credentialButton {
+  min-height: 38px !important;
+  padding: 0.42rem 0.72rem !important;
+  font-size: 0.82rem !important;
+  white-space: nowrap;
+}
+
+.credentialButton:hover span:last-child,
+.credentialButton:focus-visible span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
 }
 
 .techChips {

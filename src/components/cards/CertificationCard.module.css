@@ -16,3 +16,9 @@
 .card p {
   color: var(--color-muted);
 }
+
+.credentialButton:hover span:last-child,
+.credentialButton:focus-visible span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}

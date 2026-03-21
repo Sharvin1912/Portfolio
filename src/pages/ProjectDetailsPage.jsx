@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import Container from "../components/layout/Container";
 import DetailNavbar from "../components/navigation/DetailNavbar";
@@ -15,6 +15,14 @@ function flattenProjects(projectsData) {
   return [...(projectsData.featured || []), ...(projectsData.more || [])];
 }
 
+function BackIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M15 6 9 12l6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function ProjectDetailsPage({ siteMeta, navigation, projectsData }) {
   const { projectId } = useParams();
   const projects = useMemo(() => flattenProjects(projectsData), [projectsData]);
@@ -25,6 +33,12 @@ export default function ProjectDetailsPage({ siteMeta, navigation, projectsData 
     detail.layout === "p2-structured" ||
     detail.layout === "p3-structured" ||
     detail.layout === "p4-structured";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const reset = window.setTimeout(() => window.scrollTo(0, 0), 0);
+    return () => window.clearTimeout(reset);
+  }, [projectId]);
 
   const renderFigures = (figures = []) => {
     if (!figures.length) return null;
@@ -50,7 +64,14 @@ export default function ProjectDetailsPage({ siteMeta, navigation, projectsData 
           <Card>
             <h1>Project Not Found</h1>
             <p>This project does not exist yet or the URL is incorrect.</p>
-            <Button href="#/?section=projects" variant="ghost" className={styles.backButton}>Back to Projects</Button>
+            <Button
+              href="#/?section=projects"
+              variant="ghost"
+              className={styles.backButton}
+              startIcon={<BackIcon />}
+            >
+              Back to Projects
+            </Button>
           </Card>
         </Container>
       </>
@@ -61,7 +82,14 @@ export default function ProjectDetailsPage({ siteMeta, navigation, projectsData 
     <>
       <DetailNavbar brand={siteMeta.siteName} brandLogo={siteMeta.brandLogo} links={navigation} />
       <Container className={styles.wrapper}>
-        <Button href="#/?section=projects" variant="ghost" className={styles.backButton}>Back to Projects</Button>
+        <Button
+          href="#/?section=projects"
+          variant="ghost"
+          className={styles.backButton}
+          startIcon={<BackIcon />}
+        >
+          Back to Projects
+        </Button>
 
         <Card className={styles.card}>
           <header className={styles.header}>
@@ -181,16 +209,28 @@ export default function ProjectDetailsPage({ siteMeta, navigation, projectsData 
           )}
 
           {detail.reportLink?.href ? (
-            <section className={styles.block}>
-              <h3>Report Link</h3>
-              <Button href={detail.reportLink.href} target="_blank" rel="noreferrer" variant="ghost">
+            <section className={styles.reportCta}>
+              <Button
+                href={detail.reportLink.href}
+                target="_blank"
+                rel="noreferrer"
+                variant="primary"
+                className={styles.reportButton}
+              >
                 {detail.reportLink.label || "Open Report"}
               </Button>
             </section>
           ) : null}
         </Card>
 
-        <Button href="#/?section=projects" variant="ghost" className={styles.backButton}>Back to Projects</Button>
+        <Button
+          href="#/?section=projects"
+          variant="ghost"
+          className={styles.backButton}
+          startIcon={<BackIcon />}
+        >
+          Back to Projects
+        </Button>
       </Container>
     </>
   );
