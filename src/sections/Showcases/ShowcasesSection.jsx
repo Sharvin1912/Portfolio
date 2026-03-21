@@ -27,7 +27,15 @@ export default function ShowcasesSection({ data }) {
 
         <div className={styles.contentGrid}>
           <div className={styles.leftCol}>
-            <p className={styles.summary}>{data.researchSummary}</p>
+            {data.researchPoints?.length ? (
+              <ul className={styles.summaryList}>
+                {data.researchPoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className={styles.summary}>{data.researchSummary}</p>
+            )}
           </div>
 
           <aside className={styles.rightCol}>

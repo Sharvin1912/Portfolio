@@ -29,10 +29,58 @@
   font-weight: 700;
 }
 
+.subtitle {
+  margin: 0.65rem 0 0 0;
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 .intro {
   margin: 0;
   color: #475062;
   line-height: 1.7;
+}
+
+.block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.block h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.block p {
+  margin: 0;
+  color: #475062;
+  line-height: 1.7;
+}
+
+.keywordGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keywordChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.78rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.85rem;
+  background: #f7f8fc;
+  color: #323b4f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.keywordChipImportant {
+  border: 2px solid #1b1f2b;
+  box-shadow: 2px 2px 0 #1b1f2b;
+  background: #ffffff;
 }
 
 .points {
@@ -43,8 +91,123 @@
   color: #475062;
 }
 
+.resultHighlights {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.resultCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.85rem;
+  background: #fcfdff;
+}
+
+.resultCard h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.resultCard p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.valuePositive {
+  color: #1f6f43 !important;
+}
+
+.valueTradeoff {
+  color: #b03131 !important;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border), #fff 20%);
+  font-size: 0.93rem;
+}
+
+.table th {
+  width: 38%;
+  color: #30384a;
+  font-weight: 700;
+  background: #fbfcff;
+}
+
+.table td {
+  color: #505a6f;
+}
+
+.table tr:last-child th,
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
 .mediaSection {
   display: grid;
   gap: var(--space-4);
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.figureGrid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.figureCard {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fcfdff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.figureMedia {
+  background: #ffffff;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.figureMedia img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 320px;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 0.45rem;
+}
+
+.figureCard figcaption {
+  padding: 0.6rem 0.78rem 0.75rem 0.78rem;
+  font-size: 0.86rem;
+  color: #454f63;
+  line-height: 1.45;
+  text-align: center;
+  font-weight: 700;
+  margin-top: auto;
 }

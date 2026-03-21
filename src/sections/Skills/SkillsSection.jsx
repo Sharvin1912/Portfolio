@@ -5,6 +5,7 @@ import styles from "./SkillsSection.module.css";
 
 export default function SkillsSection({ data, certifications }) {
   if (!data?.enabled) return null;
+  const visibleCertifications = (certifications?.items || []).filter((item) => item.enabled !== false);
 
   const toolsGridStyle = {
     "--tools-cols-desktop": data.toolsGrid?.desktopColumns || 5,
@@ -28,7 +29,7 @@ export default function SkillsSection({ data, certifications }) {
         <section className={styles.subsection}>
           <h3>Certifications</h3>
           <div className={styles.certList}>
-            {certifications?.items?.map((item) => (
+            {visibleCertifications.map((item) => (
               <article key={item.id} className={styles.certItem}>
                 <div>
                   <h4>{item.name}</h4>

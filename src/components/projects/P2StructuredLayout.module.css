@@ -1,0 +1,366 @@
+.layout {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.sectionCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 0.95rem;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.keywordRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keywordChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.46rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.8rem;
+  background: #f7f8fc;
+  color: #30384a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.keywordChipImportant {
+  border: 2px solid #1d2230;
+  box-shadow: 2px 2px 0 #1d2230;
+  background: #fff;
+}
+
+.overviewRow,
+.setupRow,
+.materialRow {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 480px);
+  align-items: start;
+}
+
+.textPanel {
+  padding: 0.1rem;
+  min-height: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.textPanel p {
+  margin: 0;
+  color: #465064;
+  line-height: 1.7;
+}
+
+.textPanel ul,
+.stepList,
+.powerList,
+.takeawayList {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+  color: #465064;
+}
+
+.stepList {
+  counter-reset: step;
+}
+
+.stepList li::marker {
+  font-weight: 700;
+  color: #30384a;
+}
+
+.figureCard {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.figureMedia {
+  background: #ffffff;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+}
+
+.figureMedia img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+
+.figureCard figcaption {
+  padding: 0.55rem 0.7rem 0.75rem 0.7rem;
+  font-size: 0.85rem;
+  color: #4b5569;
+  line-height: 1.45;
+  text-align: center;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.sideFigure {
+  align-self: center;
+}
+
+.equation {
+  margin: 0;
+  font-weight: 700;
+  color: #2f3b52 !important;
+  line-height: 1.7;
+  background: #f8faff;
+  border: 1px solid var(--color-border);
+  border-radius: 0.7rem;
+  padding: 0.55rem 0.35rem;
+}
+
+.modelName {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2f374a;
+}
+
+.formulaFigure {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.formulaMedia {
+  padding: 0.2rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.formulaMedia img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: var(--formula-max-height, 240px);
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  transform: scale(var(--formula-scale, 1));
+  transform-origin: center center;
+}
+
+.caseNote {
+  margin: 0;
+  color: #465064;
+  font-weight: 600;
+}
+
+.resultsCaseGrid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.resultsCaseGrid .figureCard {
+  height: 100%;
+}
+
+.resultsCaseGrid .figureMedia {
+  min-height: 250px;
+}
+
+.resultsCaseGrid .figureMedia img {
+  width: 100%;
+  max-height: 235px;
+}
+
+.videoCard {
+  margin: 0 auto;
+  width: min(760px, 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoMedia {
+  background: #ffffff;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoMedia video {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  border-radius: calc(var(--radius-md) - 3px);
+  display: block;
+}
+
+.videoCard figcaption {
+  padding: 0.55rem 0.7rem 0.75rem 0.7rem;
+  font-size: 0.85rem;
+  color: #4b5569;
+  line-height: 1.45;
+  text-align: center;
+  font-weight: 700;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.62rem 0.76rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border), #fff 20%);
+  font-size: 0.9rem;
+  color: #4f5a6f;
+}
+
+.table th {
+  font-weight: 700;
+  color: #30384a;
+  background: #fbfcff;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.lead {
+  margin: 0;
+  color: #465064;
+  line-height: 1.7;
+}
+
+.resultHighlights {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.resultCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.72rem 0.84rem;
+  background: #fcfdff;
+}
+
+.resultCard h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.resultCard p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.valuePositive {
+  color: #1f6f43;
+}
+
+.valueTradeoff {
+  color: #b03131;
+  font-weight: 700;
+}
+
+.designBlocks {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.designBlock {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fcfdff;
+  padding: 0.8rem 0.9rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.designBlock h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2f374a;
+}
+
+.designBlock p {
+  margin: 0;
+  color: #465064;
+  line-height: 1.65;
+}
+
+.equationLine {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1f2b3f;
+  text-align: center;
+}
+
+.designLine {
+  font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+  .overviewRow,
+  .setupRow,
+  .materialRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .resultsCaseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .figureMedia {
+    min-height: 180px;
+  }
+}

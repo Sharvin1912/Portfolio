@@ -1,6 +1,6 @@
 const socialLinks = [
-  { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/username", icon: "linkedin" },
-  { id: "github", label: "GitHub", href: "https://github.com/username", icon: "github" },
+  { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/sharvin-t19", icon: "linkedin" },
+  { id: "github", label: "GitHub", href: "https://github.com/Sharvin1912", icon: "github" },
 ];
 
 export default socialLinks;

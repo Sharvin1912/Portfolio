@@ -7,7 +7,7 @@ const hero = {
   heading: "SHARVIN TAGUNDE",
   role: "MECHANICAL ENGINEER",
   subheading:
-    "Mechanical engineer focused on turning concepts into manufacturable products through solid design thinking, simulation-informed decisions, and practical prototyping. I enjoy solving real-world engineering problems with reliable, efficient, and production-ready solutions.",
+    "MS Mechanical Engineering candidate at UT Dallas with a 3.75 GPA, active graduate research, and 18+ months of industry internship experience. Skilled in CAD, FEA, DFM, and engineering optimization - with a track record of taking designs from whiteboard to working prototype across clean-tech, robotics, and industrial applications.",
   actions: [
     {
       id: "view-projects",
@@ -20,7 +20,7 @@ const hero = {
     {
       id: "download-resume",
       label: "Resume",
-      href: "https://drive.google.com/",
+      href: "https://drive.google.com/file/d/1kB3hBWnUFLn_e0xXnBb3xU3w7DVUo-Ps/view?usp=drive_link",
       variant: "ghost",
       icon: "download",
       iconPosition: "start",
@@ -29,8 +29,8 @@ const hero = {
   quickLinks: [
     { id: "mail", label: "Mail", href: "mailto:tagundesharvin@gmail.com", icon: "mail" },
     { id: "contact", label: "Contact", href: "#/?section=contact", icon: "phone" },
-    { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/username", icon: "linkedin" },
-    { id: "github", label: "GitHub", href: "https://github.com/username", icon: "github" },
+    { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/sharvin-t19", icon: "linkedin" },
+    { id: "github", label: "GitHub", href: "https://github.com/Sharvin1912", icon: "github" },
   ],
   profileImage: {
     src: profilePhoto,

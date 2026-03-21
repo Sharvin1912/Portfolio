@@ -8,8 +8,10 @@ const showcases = {
   organization: "Electromagnetic Wave Energy Harvesting",
   organizationSubheading: "Humanoid, Biorobotics & Smart Systems (HBS) Lab, University of Texas at Dallas",
   period: "Aug 2024 - Present",
-  researchSummary:
-    "This research focuses on practical engineering decisions, iterative testing, and manufacturable design outcomes. The work combines problem framing, prototype feedback, and data-backed refinement to improve reliability and usability.",
+  researchPoints: [
+  "Working on the development of a novel low-frequency wave energy harvesting system targeting efficient power generation from irregular and ultra-low-frequency ocean conditions.", 
+  "The research aims to create a compact, robust, and scalable solution using iterative design optimization, prototype development, and system-level characterization to enhance energy conversion performance of the harvesting device thus addressing key limitations of conventional energy harvesting systems, with potential applications in offshore sensing and autonomous marine devices.",
+  ],
   mentor: {
     label: "Mentor",
     name: "Dr. Yonas Tadesse",

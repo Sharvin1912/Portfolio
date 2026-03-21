@@ -8,7 +8,11 @@
 .mediaWrap {
   overflow: hidden;
   border-radius: 0.8rem;
-  max-height: 280px;
+  height: 280px;
+}
+
+.mediaWrap > * {
+  height: 100%;
 }
 
 .copy {

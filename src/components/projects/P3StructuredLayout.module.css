@@ -1,0 +1,183 @@
+.layout {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.sectionCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 0.95rem;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.keywordRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keywordChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.46rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.8rem;
+  background: #f7f8fc;
+  color: #30384a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.keywordChipImportant {
+  border: 2px solid #1d2230;
+  box-shadow: 2px 2px 0 #1d2230;
+  background: #fff;
+}
+
+.summaryRow {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 430px);
+  align-items: start;
+}
+
+.textPanel {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.textPanel p {
+  margin: 0;
+  color: #465064;
+  line-height: 1.7;
+}
+
+.sectionNarrative {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sectionNarrative p {
+  margin: 0;
+  color: #465064;
+  line-height: 1.7;
+}
+
+.methodList {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+  color: #465064;
+}
+
+.figureCard,
+.videoCard {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.figureMedia,
+.videoMedia {
+  background: #ffffff;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.figureMedia img,
+.videoMedia video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+
+.videoMedia video {
+  width: 100%;
+}
+
+.figureCard figcaption,
+.videoCard figcaption {
+  padding: 0.55rem 0.7rem 0.75rem 0.7rem;
+  font-size: 0.85rem;
+  color: #4b5569;
+  line-height: 1.45;
+  text-align: center;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.sideFigure {
+  align-self: center;
+}
+
+.twoGrid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.printedFigure {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.printedNotes {
+  width: min(760px, 100%);
+  margin: 0.1rem auto 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.printedNotes p {
+  margin: 0;
+  color: #465064;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.drawingStack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.takeawayList {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+  color: #465064;
+}
+
+@media (max-width: 980px) {
+  .summaryRow,
+  .twoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .figureMedia,
+  .videoMedia {
+    min-height: 170px;
+  }
+}

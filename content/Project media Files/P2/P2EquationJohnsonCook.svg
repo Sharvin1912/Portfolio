@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="300" viewBox="0 0 1700 300" role="img" aria-label="Johnson Cook constitutive equation">
+  <rect width="1700" height="300" fill="#ffffff"/>
+  <text x="24" y="190" font-family="Times New Roman, Cambria Math, serif" font-size="92" fill="#522650" font-style="italic">
+    σy (εp, ε̇, T) = [A + Bεpⁿ][1 + C ln(ε̇p*)][1 − (T − Tref)/(Tmelt − Tref)]ᵐ
+  </text>
+</svg>

@@ -10,7 +10,11 @@ export default function ProjectCard({ project }) {
   return (
     <Card className={styles.card}>
       <div className={styles.mediaWrap}>
-        <MediaFrame src={project.thumbnail} alt={project.name} />
+        <MediaFrame
+          src={project.thumbnail}
+          alt={project.name}
+          objectPosition={project.thumbnailPosition}
+        />
       </div>
 
       <div className={styles.copy}>

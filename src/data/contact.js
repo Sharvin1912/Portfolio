@@ -2,7 +2,7 @@ const contact = {
   id: "contact",
   enabled: true,
   title: "Contact",
-  summary: "Let us build something practical, polished, and useful.",
+  summary: "Currently looking for Full Times Roles in Design, Manufacturing, Robotics and related fields.",
   cta: { label: "Email Me", href: "mailto:tagundesharvin@gmail.com" },
   items: [
     { id: "ct1", label: "Email", value: "tagundesharvin@gmail.com", href: "mailto:tagundesharvin@gmail.com" },
