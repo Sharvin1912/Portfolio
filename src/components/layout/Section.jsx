@@ -24,7 +24,7 @@ export default function Section({ id, className = "", children }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
     );
 
     observer.observe(element);

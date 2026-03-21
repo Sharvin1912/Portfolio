@@ -1,12 +1,13 @@
 .heroSection {
   min-height: calc(100vh - var(--header-height));
-  padding-bottom: var(--space-20) !important;
+  min-height: calc(100dvh - var(--header-height));
+  padding-bottom: clamp(var(--space-8), 7vh, var(--space-20)) !important;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-16);
+  gap: clamp(var(--space-8), 5.5vw, var(--space-16));
   align-items: center;
 }
 
@@ -49,7 +50,8 @@
   letter-spacing: -0.015em;
   font-weight: 800;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .role {
@@ -63,7 +65,7 @@
 .subheading {
   margin: 0 0 1.15rem 0;
   color: var(--color-muted);
-  max-width: 58ch;
+  max-width: 62ch;
   font-size: 0.98rem;
   text-align: justify;
   text-justify: inter-word;
@@ -195,19 +197,34 @@
   object-position: center 24%;
 }
 
+@media (max-width: 1120px) {
+  .content h1 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+  }
+
+  .role {
+    font-size: clamp(1.02rem, 2vw, 1.3rem);
+  }
+
+  .subheading {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 
-  .content h1 {
-    white-space: normal;
+  .heroSection {
+    min-height: calc(100svh - var(--header-height));
+    padding-bottom: var(--space-10) !important;
   }
 
   .mediaStack {
     max-width: 420px;
-    justify-self: start;
+    justify-self: center;
     padding-bottom: 2.2rem;
     padding-right: 2.2rem;
   }
@@ -215,6 +232,62 @@
   .backFrame {
     width: calc(100% - 1.2rem);
     height: calc(100% - 0.7rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    min-height: calc(100svh - var(--header-height));
+    padding-bottom: var(--space-8) !important;
+  }
+
+  .availability {
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .content h1 {
+    font-size: clamp(1.65rem, 9vw, 2.25rem);
+  }
+
+  .role {
+    margin-bottom: 0.7rem;
+    font-size: clamp(0.95rem, 5vw, 1.1rem);
+  }
+
+  .subheading {
+    margin-bottom: 0.95rem;
+    font-size: 0.92rem;
+  }
+
+  .actions {
+    width: 100%;
+    gap: var(--space-2);
+  }
+
+  .actions :global(a) {
+    flex: 1 1 100%;
+  }
+
+  .quickLinks {
+    gap: var(--space-2);
+  }
+
+  .iconLink {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .mediaStack {
+    width: min(100%, 360px);
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .backFrame {
+    width: calc(100% - 0.8rem);
+    height: calc(100% - 0.5rem);
   }
 }
 

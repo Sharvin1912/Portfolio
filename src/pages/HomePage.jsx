@@ -39,18 +39,24 @@ export default function HomePage({
 
   useEffect(() => {
     let locked = false;
+    let touchStartY = null;
 
-    const shouldJumpToResearch = () => {
+    const canJumpToResearch = () => {
       const hero = document.getElementById("hero");
       const research = document.getElementById("research");
       if (!hero || !research) return false;
 
+      const headerHeight =
+        Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) || 72;
       const heroRect = hero.getBoundingClientRect();
       const researchRect = research.getBoundingClientRect();
-      const heroFocused = heroRect.top <= 0 && heroRect.bottom > window.innerHeight * 0.55;
-      const atTop = window.scrollY < 40;
+      const nearTop = window.scrollY <= 56;
+      const heroFocused =
+        heroRect.top <= headerHeight + 8 &&
+        heroRect.bottom >= window.innerHeight * 0.45;
+      const researchNotReached = researchRect.top > headerHeight + 8;
 
-      return (atTop || heroFocused) && researchRect.top > 0;
+      return (nearTop || heroFocused) && researchNotReached;
     };
 
     const jump = () => {
@@ -63,8 +69,8 @@ export default function HomePage({
 
     const onWheel = (event) => {
       if (locked) return;
-      if (event.deltaY < 20) return;
-      if (!shouldJumpToResearch()) return;
+      if (event.deltaY <= 3) return;
+      if (!canJumpToResearch()) return;
       event.preventDefault();
       jump();
     };
@@ -72,16 +78,34 @@ export default function HomePage({
     const onKeyDown = (event) => {
       if (locked) return;
       if (!["ArrowDown", "PageDown", " "].includes(event.key)) return;
-      if (!shouldJumpToResearch()) return;
+      if (!canJumpToResearch()) return;
       event.preventDefault();
+      jump();
+    };
+
+    const onTouchStart = (event) => {
+      touchStartY = event.touches?.[0]?.clientY ?? null;
+    };
+
+    const onTouchEnd = (event) => {
+      if (locked || touchStartY == null) return;
+      const touchEndY = event.changedTouches?.[0]?.clientY ?? touchStartY;
+      const swipeDistance = touchStartY - touchEndY;
+      touchStartY = null;
+      if (swipeDistance <= 28) return;
+      if (!canJumpToResearch()) return;
       jump();
     };
 
     window.addEventListener("wheel", onWheel, { passive: false });
     window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
     return () => {
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
     };
   }, []);
 

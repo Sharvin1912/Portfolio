@@ -30,6 +30,12 @@
   }
 }
 
+@media (max-width: 640px) {
+  .grid {
+    gap: var(--space-3);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .grid > * {
     animation: none !important;
